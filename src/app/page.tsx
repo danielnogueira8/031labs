@@ -5,35 +5,31 @@ export default function Home() {
       <header className="sticky top-0 z-40 backdrop-blur supports-[backdrop-filter]:bg-background/70 border-b border-white/10">
         <div className="container-page px-6 py-4 flex items-center justify-between">
           <a href="#" className="font-semibold tracking-tight">031Labs</a>
-          <nav className="hidden sm:flex items-center gap-6 text-sm">
+          <nav className="hidden sm:flex items-center gap-6 text-sm text-foreground/80">
             <a href="#benefits" className="hover:opacity-80">Benefits</a>
             <a href="#services" className="hover:opacity-80">Services</a>
             <a href="#process" className="hover:opacity-80">Process</a>
             <a href="#pricing" className="hover:opacity-80">Pricing</a>
             <a href="#faq" className="hover:opacity-80">FAQ</a>
           </nav>
-          <a href="#contact" className="hidden sm:inline-flex items-center justify-center rounded-full bg-foreground text-background px-4 py-2 text-xs font-medium hover:opacity-90 transition">Contact</a>
+          <a href="#contact" className="hidden sm:inline-flex btn btn-primary">Contact</a>
         </div>
       </header>
 
       {/* Hero (Landio-like) */}
       <section className="hero-gradient border-b border-white/10">
-        <div className="container-page px-6 py-24 sm:py-32">
+        <div className="container-page px-6 py-28 sm:py-40">
           <div className="max-w-3xl">
-            <div className="text-xs uppercase tracking-widest text-foreground/60">New Gen MVP Partner</div>
-            <h1 className="mt-3 text-4xl sm:text-6xl font-semibold leading-tight">
+            <div className="text-[11px] uppercase tracking-[0.2em] text-foreground/60">New Gen MVP Partner</div>
+            <h1 className="mt-4 text-4xl sm:text-6xl font-semibold leading-[1.05] tracking-tight">
               Build your MVP in 31 days. Launch faster. Validate smarter.
             </h1>
-            <p className="mt-5 text-lg sm:text-xl text-foreground/70">
+            <p className="mt-6 text-lg sm:text-xl text-foreground/70 max-w-2xl">
               We ship production-ready MVPs for a flat $3,500 — includes domain, hosting, database, auth, and three core features.
             </p>
             <div className="mt-8 flex flex-col sm:flex-row gap-3">
-              <a href="#pricing" className="inline-flex items-center justify-center rounded-full bg-foreground text-background px-6 py-3 text-sm font-medium hover:opacity-90 transition">
-                Start for $3,500
-              </a>
-              <a href="#process" className="inline-flex items-center justify-center rounded-full border border-foreground/20 px-6 py-3 text-sm font-medium hover:bg-foreground/5 transition">
-                See how it works
-              </a>
+              <a href="#pricing" className="btn btn-primary">Start for $3,500</a>
+              <a href="#process" className="btn btn-ghost">See how it works</a>
             </div>
           </div>
         </div>
