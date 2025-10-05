@@ -1,20 +1,7 @@
 export default function Home() {
   return (
     <div className="font-sans">
-      {/* Top Navigation (sticky) */}
-      <header className="sticky top-0 z-40 backdrop-blur supports-[backdrop-filter]:bg-background/70 border-b border-white/10">
-        <div className="container-page px-6 py-4 flex items-center justify-between">
-          <a href="#" className="font-semibold tracking-tight">031Labs</a>
-          <nav className="hidden sm:flex items-center gap-6 text-sm text-foreground/80">
-            <a href="#benefits" className="hover:opacity-80">Benefits</a>
-            <a href="#services" className="hover:opacity-80">Services</a>
-            <a href="#process" className="hover:opacity-80">Process</a>
-            <a href="#pricing" className="hover:opacity-80">Pricing</a>
-            <a href="#faq" className="hover:opacity-80">FAQ</a>
-          </nav>
-          <a href="#contact" className="hidden sm:inline-flex btn btn-primary">Contact</a>
-        </div>
-      </header>
+      {/* Navigation removed as requested */}
 
       {/* Hero (Landio-like) */}
       <section className="hero-gradient border-b border-white/10">
