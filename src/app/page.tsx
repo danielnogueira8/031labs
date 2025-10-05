@@ -100,6 +100,48 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Previous Work */}
+      <section id="work" className="border-b border-white/10">
+        <div className="container-page px-6 py-16 sm:py-24">
+          <h2 className="text-2xl sm:text-3xl font-semibold">Previous work</h2>
+          <div className="mt-8 grid gap-6">
+            <article className="rounded-2xl border border-white/10 p-5">
+              <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-3">
+                <div>
+                  <h3 className="text-xl font-semibold">VibePredict</h3>
+                  <p className="text-sm text-foreground/70 mt-1">AI-driven predictions platform</p>
+                </div>
+                <div className="flex items-center gap-3">
+                  <a
+                    href="https://tryvibepredict.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center justify-center rounded-full border border-foreground/20 px-4 py-2 text-xs font-medium hover:bg-foreground/5 transition"
+                  >
+                    Open live
+                  </a>
+                </div>
+              </div>
+              <div
+                className="mt-4 relative w-full overflow-hidden rounded-xl border border-white/10 bg-foreground/5"
+                style={{ aspectRatio: "16 / 9" }}
+              >
+                <iframe
+                  src="https://tryvibepredict.com"
+                  title="VibePredict — tryvibepredict.com"
+                  className="absolute inset-0 w-full h-full"
+                  loading="lazy"
+                />
+                <div className="pointer-events-none absolute inset-0 ring-1 ring-inset ring-white/10 rounded-xl" />
+              </div>
+              <p className="mt-3 text-sm text-foreground/70">
+                Delivered MVP: auth, dashboard, core predictions flow, and analytics — deployed on a global edge.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
       {/* Pricing */}
       <section id="pricing" className="border-b border-white/10">
         <div className="container-page px-6 py-16 sm:py-24">
@@ -194,6 +236,7 @@ export default function Home() {
           <footer className="mt-10 py-6 text-sm text-foreground/60 flex flex-col sm:flex-row items-center justify-between gap-2">
             <div>© {new Date().getFullYear()} 031Labs. All rights reserved.</div>
             <div className="flex items-center gap-4">
+              <a href="#work" className="hover:underline">Previous Work</a>
               <a href="#pricing" className="hover:underline">Pricing</a>
               <a href="#faq" className="hover:underline">FAQ</a>
               <a href="mailto:hello@031labs.com" className="hover:underline">Contact</a>
