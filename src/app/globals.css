@@ -132,3 +132,31 @@ html { scroll-behavior: smooth; }
   margin-left: auto;
   margin-right: auto;
 }
+
+/* Process section */
+.process-wrap {
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.02));
+}
+.process-tabs {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+.process-tab {
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 12px 16px;
+  text-align: center;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+}
+.process-tab-active {
+  background: rgba(255,255,255,0.05);
+}
+.mock-card {
+  border: 1px solid var(--border);
+  background: rgba(255,255,255,0.03);
+  border-radius: 14px;
+}

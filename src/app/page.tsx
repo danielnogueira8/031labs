@@ -119,36 +119,74 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Process */}
+      {/* Process redesigned */}
       <section id="process" className="border-b border-white/10">
-        <div className="container-page px-6 py-16 sm:py-24">
-          <h2 className="text-2xl sm:text-3xl font-semibold">How it works</h2>
-          <ol className="mt-8 grid sm:grid-cols-2 lg:grid-cols-4 gap-6 list-decimal list-inside">
-            {[
-              {
-                title: "Scope & strategy",
-                desc: "We pick the three core features and define success together.",
-              },
-              {
-                title: "Design & architecture",
-                desc: "System design, clean UI, and data model for fast delivery.",
-              },
-              {
-                title: "Build & iterate",
-                desc: "Weekly check-ins, continuous delivery, fast feedback loops.",
-              },
-              {
-                title: "Launch in 31 days",
-                desc: "Domain connected, hosting live, users can sign up and use it.",
-              },
-            ].map((s, idx) => (
-              <li key={s.title} className="rounded-xl border border-white/10 p-5">
-                <div className="text-xs uppercase tracking-wider text-foreground/60">Step {idx + 1}</div>
-                <div className="mt-2 font-semibold">{s.title}</div>
-                <div className="mt-1 text-sm text-foreground/70">{s.desc}</div>
-              </li>
-            ))}
-          </ol>
+        <div className="container-page px-6 py-20 sm:py-28">
+          <div className="text-center">
+            <span className="pill">Process</span>
+            <h2 className="mt-4 text-3xl sm:text-4xl font-semibold">Our Simple & Smart Process</h2>
+            <p className="mt-2 text-sm sm:text-base text-foreground/70">Everything you need to collaborate, create, and scale, all in one place.</p>
+          </div>
+
+          <div className="mt-10 process-wrap p-5 sm:p-6">
+            <div className="process-tabs">
+              <div className="process-tab process-tab-active">STEP 1</div>
+              <div className="process-tab">STEP 2</div>
+              <div className="process-tab">STEP 3</div>
+            </div>
+
+            <div className="mt-6 grid lg:grid-cols-2 gap-6 items-start">
+              {/* Mock charts */}
+              <div className="space-y-4">
+                <div className="mock-card p-4">
+                  <div className="flex items-center justify-between text-[10px] text-foreground/60">
+                    <span>Customers</span><span>+ Chart</span>
+                  </div>
+                  <div className="mt-3 h-24 rounded-md border border-white/10 bg-white/5 grid place-items-center">
+                    <img src="/icons/chart-line.svg" alt="Chart" className="h-10 opacity-70" />
+                  </div>
+                </div>
+                <div className="mock-card p-4">
+                  <div className="flex items-center justify-between text-[10px] text-foreground/60">
+                    <span>Cost Management</span><span>+ Chart</span>
+                  </div>
+                  <div className="mt-3 h-24 rounded-md border border-white/10 bg-white/5 grid place-items-center">
+                    <img src="/icons/chart-line.svg" alt="Chart" className="h-10 opacity-70" />
+                  </div>
+                </div>
+                <div className="mock-card p-4">
+                  <div className="text-[10px] text-foreground/60">Weakest Systems</div>
+                  <div className="mt-3 space-y-2">
+                    {["Marketing & ads", "AI Automation", "Money & Finance"].map((label, i) => (
+                      <div key={label} className="flex items-center gap-3">
+                        <div className="h-6 w-6 rounded-md border border-white/10 bg-white/5" />
+                        <div className="flex-1">
+                          <div className="text-[11px] text-foreground/80">{label}</div>
+                          <div className="mt-1 h-1.5 rounded-full bg-white/10">
+                            <div className="h-1.5 rounded-full" style={{ width: `${[32,14,44][i]}%`, background: "var(--brand-500)" }} />
+                          </div>
+                        </div>
+                        <div className="text-[10px] text-foreground/60">{[32,14,44][i]}% <span className="opacity-60">Score</span></div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+
+              {/* Step description */}
+              <div className="pt-2">
+                <div className="text-[10px] text-foreground/60">01</div>
+                <h3 className="mt-2 text-lg font-semibold">Discover & Analyze</h3>
+                <p className="mt-2 text-sm text-foreground/70 max-w-prose">
+                  We audit your existing workflows, tools, and customer data to uncover inefficiencies and opportunities. Every system is mapped for clarity.
+                </p>
+                <div className="mt-6 grid sm:grid-cols-2 gap-3">
+                  <div className="mock-card p-4 text-sm text-foreground/80">Scope core features</div>
+                  <div className="mock-card p-4 text-sm text-foreground/80">Architecture & data model</div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
