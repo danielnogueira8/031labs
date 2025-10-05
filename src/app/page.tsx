@@ -69,24 +69,52 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Benefits */}
+      {/* Benefits (Why choose us) redesigned */}
       <section id="benefits" className="border-b border-white/10">
-        <div className="container-page px-6 py-16 sm:py-24">
-          <h2 className="text-2xl sm:text-3xl font-semibold">Why choose 031Labs</h2>
-          <div className="mt-8 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {[
-              { title: "Faster to market", desc: "Ship in 31 days, not months." },
-              { title: "Fixed pricing", desc: "$3,500 all-in, no surprises." },
-              { title: "Launch-ready stack", desc: "Domain, hosting, DB, auth included." },
-              { title: "User-first focus", desc: "Three core features that matter." },
-              { title: "Clean, accessible UI", desc: "Aesthetic design that scales." },
-              { title: "Post‑launch ready", desc: "Handover and next-step roadmap." },
-            ].map((b) => (
-              <div key={b.title} className="rounded-xl border border-white/10 p-5">
-                <h3 className="font-semibold">{b.title}</h3>
-                <p className="mt-2 text-sm text-foreground/70">{b.desc}</p>
+        <div className="container-page px-6 py-20 sm:py-28">
+          <div className="text-center">
+            <span className="pill">Benefits</span>
+            <h2 className="mt-4 text-3xl sm:text-4xl font-semibold">Why Choose Us?</h2>
+            <p className="mt-2 text-sm sm:text-base text-foreground/70">Everything you need to automate, optimize, and scale</p>
+          </div>
+          <div className="mt-10 grid gap-6 lg:grid-cols-3">
+            {/* Left card */}
+            <article className="feature-card p-6">
+              <img src="/icons/layout.svg" alt="Layout" className="h-6 opacity-80" />
+              <h3 className="mt-6 font-semibold">Faster to market</h3>
+              <p className="mt-2 text-sm text-foreground/70">Ship in 31 days, not months.</p>
+            </article>
+            {/* Featured wide card */}
+            <article className="feature-card p-6 lg:col-span-2">
+              <div className="flex items-center gap-3">
+                <img src="/icons/rocket.svg" alt="Rocket" className="h-6 opacity-90" />
+                <h3 className="font-semibold">Automated workflows</h3>
               </div>
-            ))}
+              <p className="mt-2 text-sm text-foreground/70 max-w-2xl">Boost efficiency with smart automation and fast iterations. We build intelligent flows across your app to deliver value quickly.</p>
+              <div className="mt-8 grid grid-cols-5 gap-4 opacity-70">
+                <div className="h-10 rounded-lg border border-white/10 bg-white/5" />
+                <div className="h-10 rounded-lg border border-white/10 bg-white/5" />
+                <div className="h-10 rounded-lg border border-white/10 bg-white/5" />
+                <div className="h-10 rounded-lg border border-white/10 bg-white/5" />
+                <div className="h-10 rounded-lg border border-white/10 bg-white/5" />
+              </div>
+            </article>
+            {/* Bottom row */}
+            <article className="feature-card p-6">
+              <img src="/icons/lock.svg" alt="Security" className="h-6 opacity-90" />
+              <h3 className="mt-6 font-semibold">Secure authentication</h3>
+              <p className="mt-2 text-sm text-foreground/70">Production‑grade auth and protected routes.</p>
+            </article>
+            <article className="feature-card p-6">
+              <img src="/icons/database.svg" alt="Database" className="h-6 opacity-90" />
+              <h3 className="mt-6 font-semibold">Production database</h3>
+              <p className="mt-2 text-sm text-foreground/70">Structured schema and scalable managed DB.</p>
+            </article>
+            <article className="feature-card p-6">
+              <img src="/icons/analytics.svg" alt="Analytics" className="h-6 opacity-90" />
+              <h3 className="mt-6 font-semibold">Analytics & insights</h3>
+              <p className="mt-2 text-sm text-foreground/70">Measure usage and learn from day one.</p>
+            </article>
           </div>
         </div>
       </section>
