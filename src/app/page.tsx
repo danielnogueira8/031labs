@@ -1,34 +1,46 @@
 export default function Home() {
   return (
     <div className="font-sans">
-      {/* Hero */}
-      <section className="gradient-subtle border-b border-white/10">
+      {/* Top Navigation (sticky) */}
+      <header className="sticky top-0 z-40 backdrop-blur supports-[backdrop-filter]:bg-background/70 border-b border-white/10">
+        <div className="container-page px-6 py-4 flex items-center justify-between">
+          <a href="#" className="font-semibold tracking-tight">031Labs</a>
+          <nav className="hidden sm:flex items-center gap-6 text-sm">
+            <a href="#benefits" className="hover:opacity-80">Benefits</a>
+            <a href="#services" className="hover:opacity-80">Services</a>
+            <a href="#process" className="hover:opacity-80">Process</a>
+            <a href="#pricing" className="hover:opacity-80">Pricing</a>
+            <a href="#faq" className="hover:opacity-80">FAQ</a>
+          </nav>
+          <a href="#contact" className="hidden sm:inline-flex items-center justify-center rounded-full bg-foreground text-background px-4 py-2 text-xs font-medium hover:opacity-90 transition">Contact</a>
+        </div>
+      </header>
+
+      {/* Hero (Landio-like) */}
+      <section className="hero-gradient border-b border-white/10">
         <div className="container-page px-6 py-24 sm:py-32">
           <div className="max-w-3xl">
-            <p className="text-sm uppercase tracking-widest text-foreground/60">031Labs</p>
-            <h1 className="mt-4 text-4xl sm:text-6xl font-semibold leading-tight">
-              Launch-ready MVPs in 31 days for a flat $3,500
+            <div className="text-xs uppercase tracking-widest text-foreground/60">New Gen MVP Partner</div>
+            <h1 className="mt-3 text-4xl sm:text-6xl font-semibold leading-tight">
+              Build your MVP in 31 days. Launch faster. Validate smarter.
             </h1>
-            <p className="mt-6 text-lg sm:text-xl text-foreground/70">
-              Validate your idea without burning months or tens of thousands. We deliver a production-ready MVP including domain, hosting, database, auth, and three core features.
+            <p className="mt-5 text-lg sm:text-xl text-foreground/70">
+              We ship production-ready MVPs for a flat $3,500 — includes domain, hosting, database, auth, and three core features.
             </p>
             <div className="mt-8 flex flex-col sm:flex-row gap-3">
               <a href="#pricing" className="inline-flex items-center justify-center rounded-full bg-foreground text-background px-6 py-3 text-sm font-medium hover:opacity-90 transition">
                 Start for $3,500
               </a>
-              <a href="#faq" className="inline-flex items-center justify-center rounded-full border border-foreground/20 px-6 py-3 text-sm font-medium hover:bg-foreground/5 transition">
-                See FAQs
+              <a href="#process" className="inline-flex items-center justify-center rounded-full border border-foreground/20 px-6 py-3 text-sm font-medium hover:bg-foreground/5 transition">
+                See how it works
               </a>
-            </div>
-            <div className="mt-6 text-sm text-foreground/60">
-              31 days • Domain • Hosting • Database • Auth • 3 features
             </div>
           </div>
         </div>
       </section>
 
       {/* What you get */}
-      <section className="border-b border-white/10">
+      <section id="services" className="border-b border-white/10">
         <div className="container-page px-6 py-16 sm:py-24">
           <h2 className="text-2xl sm:text-3xl font-semibold">What’s included</h2>
           <div className="mt-8 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -67,8 +79,30 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Benefits */}
+      <section id="benefits" className="border-b border-white/10">
+        <div className="container-page px-6 py-16 sm:py-24">
+          <h2 className="text-2xl sm:text-3xl font-semibold">Why choose 031Labs</h2>
+          <div className="mt-8 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {[
+              { title: "Faster to market", desc: "Ship in 31 days, not months." },
+              { title: "Fixed pricing", desc: "$3,500 all-in, no surprises." },
+              { title: "Launch-ready stack", desc: "Domain, hosting, DB, auth included." },
+              { title: "User-first focus", desc: "Three core features that matter." },
+              { title: "Clean, accessible UI", desc: "Aesthetic design that scales." },
+              { title: "Post‑launch ready", desc: "Handover and next-step roadmap." },
+            ].map((b) => (
+              <div key={b.title} className="rounded-xl border border-white/10 p-5">
+                <h3 className="font-semibold">{b.title}</h3>
+                <p className="mt-2 text-sm text-foreground/70">{b.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Process */}
-      <section className="border-b border-white/10">
+      <section id="process" className="border-b border-white/10">
         <div className="container-page px-6 py-16 sm:py-24">
           <h2 className="text-2xl sm:text-3xl font-semibold">How it works</h2>
           <ol className="mt-8 grid sm:grid-cols-2 lg:grid-cols-4 gap-6 list-decimal list-inside">
