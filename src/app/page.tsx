@@ -3,20 +3,28 @@ export default function Home() {
     <div className="font-sans">
       {/* Navigation removed as requested */}
 
-      {/* Hero (Landio-like) */}
+      {/* Hero updated to badge + headline + simple marquee */}
       <section className="hero-gradient border-b border-white/10">
         <div className="container-page px-6 py-28 sm:py-40">
           <div className="max-w-3xl">
-            <div className="text-[11px] uppercase tracking-[0.2em] text-foreground/60">New Gen MVP Partner</div>
-            <h1 className="mt-4 text-4xl sm:text-6xl font-semibold leading-[1.05] tracking-tight">
-              Build your MVP in 31 days. Launch faster. Validate smarter.
-            </h1>
-            <p className="mt-6 text-lg sm:text-xl text-foreground/70 max-w-2xl">
-              We ship production-ready MVPs for a flat $3,500 — includes domain, hosting, database, auth, and three core features.
-            </p>
+            <div className="mb-6">
+              <div className="bg-white/5 w-fit rounded-3xl border border-white/10 text-[11px] uppercase tracking-[0.2em] text-foreground/70 px-4 py-1">New Gen MVP Partner</div>
+            </div>
+            <h1 className="text-4xl sm:text-6xl font-semibold leading-[1.05] tracking-tight">Build your MVP in 31 days. Launch faster. Validate smarter.</h1>
+            <p className="mt-6 text-lg sm:text-xl text-foreground/70 max-w-2xl">We ship production-ready MVPs for a flat $3,500 — includes domain, hosting, database, auth, and three core features.</p>
             <div className="mt-8 flex flex-col sm:flex-row gap-3">
               <a href="#pricing" className="btn btn-primary">Start for $3,500</a>
               <a href="#process" className="btn btn-ghost">See how it works</a>
+            </div>
+          </div>
+          <div className="mt-12">
+            <div className="text-sm text-foreground/60">Companies we helped</div>
+            <div className="mt-2 group flex [gap:var(--gap)] overflow-hidden p-2 [--duration:40s] [--gap:1rem]">
+              <div className="animate-marquee flex shrink-0 justify-around [gap:var(--gap)]">
+                {Array(8).fill(0).map((_,i)=> (
+                  <div key={i} className="mx-4 h-10 w-28 rounded-md border border-white/10 bg-white/5" />
+                ))}
+              </div>
             </div>
           </div>
         </div>
