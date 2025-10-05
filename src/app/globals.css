@@ -86,3 +86,49 @@ html { scroll-behavior: smooth; }
   background: var(--surface);
   border-radius: 16px;
 }
+
+/* Pills */
+.pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid var(--border);
+  background: rgba(255,255,255,0.03);
+  color: var(--muted);
+  padding: 6px 12px;
+  border-radius: 9999px;
+  font-size: 11px;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+}
+
+/* Feature card visuals similar to reference */
+.feature-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 18px;
+  border: 1px solid var(--border);
+  background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.02));
+}
+.feature-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(600px 240px at 20% 0%, rgba(110,168,255,.10), transparent),
+    radial-gradient(520px 220px at 100% 120%, rgba(110,168,255,.06), transparent);
+  pointer-events: none;
+}
+.feature-card:hover { border-color: rgba(255,255,255,0.16); }
+
+.feature-icon {
+  width: 80px;
+  height: 80px;
+  border-radius: 20px;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid var(--border);
+  display: grid;
+  place-items: center;
+  margin-left: auto;
+  margin-right: auto;
+}

@@ -24,16 +24,20 @@ export default function Home() {
 
       {/* What you get */}
       <section id="services" className="border-b border-white/10">
-        <div className="container-page px-6 py-16 sm:py-24">
-          <h2 className="text-2xl sm:text-3xl font-semibold">What’s included</h2>
-          <div className="mt-8 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="container-page px-6 py-20 sm:py-28">
+          <div className="text-center">
+            <span className="pill">Benefits</span>
+            <h2 className="mt-4 text-3xl sm:text-4xl font-semibold">Why Choose Us?</h2>
+            <p className="mt-2 text-sm sm:text-base text-foreground/70">Everything you need to launch, validate, and scale your MVP</p>
+          </div>
+          <div className="mt-10 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
               {
                 title: "Custom domain & hosting",
                 desc: "We configure your domain and deploy to a global CDN for speed.",
               },
               {
-                title: "Secure auth",
+                title: "Secure authentication",
                 desc: "Sign up, login, and protected routes from day one.",
               },
               {
@@ -50,13 +54,16 @@ export default function Home() {
               },
               {
                 title: "Analytics & basics",
-                desc: "SEO meta, privacy-ready cookie banner option, and analytics hook.",
+                desc: "SEO meta and analytics hooks to learn from day one.",
               },
             ].map((f) => (
-              <div key={f.title} className="rounded-xl border border-white/10 p-5 hover:border-white/20 transition">
-                <h3 className="font-semibold">{f.title}</h3>
-                <p className="mt-2 text-foreground/70 text-sm">{f.desc}</p>
-              </div>
+              <article key={f.title} className="feature-card p-8 text-center">
+                <div className="feature-icon">
+                  <div className="h-6 w-6 rounded-full" style={{ background: "var(--brand-500)" }} />
+                </div>
+                <h3 className="mt-6 text-lg font-semibold">{f.title}</h3>
+                <p className="mt-2 text-sm text-foreground/70 max-w-sm mx-auto">{f.desc}</p>
+              </article>
             ))}
           </div>
         </div>
